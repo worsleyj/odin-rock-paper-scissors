@@ -3,6 +3,7 @@
 let playerScore = 0;
 let computerScore = 0;
 let gameLength = 0; // default game length, dynamically set via prompt
+let invalid = 0;
 
 function getComputerChoice() {
     const choices = ["Rock", "Paper", "Scissors"];
@@ -27,8 +28,9 @@ function singleRound(playerChoice, computerChoice) {
     } else if (playerChoice == computerChoice) { // draw case
         console.log("It's a draw! You both picked " + playerChoice + "!")
     } else { // otherwise, input is invalid
-        console.log("Invalid Input!")
+        console.log("Invalid Input! Try again.")
         console.log("You Entered: " + playerChoice)
+        invalid++;
     }
 }
 
@@ -38,6 +40,11 @@ function game() {
     while (counter < gameLength) {
         singleRound(prompt("Choose Rock, Paper, or Scissors"), getComputerChoice())
         counter++;
+
+        if (invalid > 0) { // if invalid input was given, run another round
+            counter--;
+            invalid--;
+        }
     }
 
     console.log("You won " + playerScore + " rounds out of " + gameLength + ", while the computer won " + computerScore + " rounds.")
