@@ -1,6 +1,12 @@
 * {
-    background-color: lightslategray;
+    background: url("rock-paper-scissors.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     color:aliceblue;
     text-align: center;
 }
+
+
 
