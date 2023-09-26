@@ -16,7 +16,10 @@ function getComputerChoice() {
 function singleRound(playerChoice, computerChoice) {
     playerChoice = playerChoice.substring(0,1).toUpperCase() + playerChoice.substring(1).toLowerCase(); // capitalizes first letter only
     
-    if ((playerChoice == "Rock" && computerChoice == "Scissors") // winning case
+    if (playerChoice == "Gun") {
+        console.log("You won, but at what cost?");
+        playerScore++;
+    } else if ((playerChoice == "Rock" && computerChoice == "Scissors") // winning case
     ||(playerChoice == "Scissors" && computerChoice == "Paper")
     ||(playerChoice == "Paper" && computerChoice == "Rock")) {
         console.log("You win! " + playerChoice + " beats " + computerChoice + ".");
