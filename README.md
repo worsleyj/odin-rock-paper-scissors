@@ -4,4 +4,4 @@ This is a javascript based project for a simple implementation of rock paper sci
 
 This project can be accessed through https://worsleyj.github.io/odin-rock-paper-scissors.
 
-Output is visible through the browser console.
+As the game progresses, the DOM will be updated with information about the game.
