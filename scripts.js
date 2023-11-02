@@ -99,32 +99,3 @@ function singleRound(playerChoice, computerChoice) {
         totalLost.textContent = ("Games Lost: " + ++loseTotal);
         }
     }
-
-// while(playerScore != 5 || computerScore != 5) {
-
-// }
-
-function game() {
-    let counter = 0;
-    while (counter < gameLength) {
-        singleRound(prompt("Choose Rock, Paper, or Scissors"), getComputerChoice())
-        counter++;
-
-        if (invalid > 0) { // if invalid input was given, run another round
-            counter--;
-            invalid--;
-        }
-    }
-
-    results.textContent = ("You won " + playerScore + " rounds out of " + gameLength + ", while the computer won " + computerScore + " rounds.")
-    results.textContent = (drawCount + " rounds ended in a draw.")
-    if (playerScore > computerScore) {
-        results.textContent = ("You won the game! To play again, refresh the page.")
-    } else if (playerScore < computerScore) {
-        results.textContent = ("You lost the game! To play again, refresh the page.")
-    } else {
-        results.textContent = ("This game was a draw! To play again, refresh the page.")
-    }
-}
-
-game()

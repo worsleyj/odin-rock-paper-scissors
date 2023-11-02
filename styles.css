@@ -1,14 +1,21 @@
 * {
-    /* background: url("images/rock-paper-scissors.jpg") no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover; */
-    /* background-size: cover;
-    color:aliceblue;*/
+    background: #455d7a;
+    color:aliceblue;
     text-align: center;
+    border-radius: 15px;
 }
 
 
+#controls {
+    background: #233142;
+    padding: 15px;
+}
+
+#rock, #paper, #scissors {
+    background-color: #f95959;
+    width: 15%;
+    height: 40px;
+}
 
 h1 {
     position: fixed;
@@ -33,7 +40,19 @@ h2 {
 }
 
 #reset {
-    width: 12%;
-    height: 50px;
-    margin-top: 350px;
+    width: 8%;
+    height: 30px;
+    background-color: #f95959;
+}
+
+#results {
+    background-color: white;
+    color: #455d7a;
+    width: 25%;
+    height: 35px;
+    font-size: 30px;
+    font-weight: 900;
+    padding: 150px;
+    margin: auto;
+    text-align: center;
 }
